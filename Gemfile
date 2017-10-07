@@ -64,3 +64,6 @@ gem 'pundit'
 
 # Use redcarpet for allowing markdown syntax
 gem 'redcarpet'
+
+#allows for an imported theme. add it to
+ gem 'bootswatch-rails'
