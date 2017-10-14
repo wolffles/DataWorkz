@@ -15,8 +15,9 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'sqlite3'
+  gem 'pg'
   gem 'listen', '~> 3.0.5'
+  gem 'rails_12factor'
 end
 
  group :development, :test do
