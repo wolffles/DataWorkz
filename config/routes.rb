@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :registered_application
+  resources :registered_applications
 
-  get 'account' => 'account#index'
+  get 'account' => 'registered_applications#index'
 
   devise_for :users
   root 'welcome#index'
