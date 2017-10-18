@@ -7,7 +7,7 @@ class RegisteredApplicationsController < ApplicationController
   def new
     @applet = RegisteredApplication.new
   end
-  
+
   def create
     @applet = RegisteredApplication.new(app_params)
     @applet.user = current_user
@@ -46,7 +46,7 @@ class RegisteredApplicationsController < ApplicationController
     #authorize@wiki_page
     if @applet.destroy
       flash[:notice] = "\"#{@applet.name}\" was deleted successfully."
-      redirect_to account_path
+      redirect_to registered_applications_path
     else
       flash.now[:alert] = "There was an error deleting the post."
       render :show
