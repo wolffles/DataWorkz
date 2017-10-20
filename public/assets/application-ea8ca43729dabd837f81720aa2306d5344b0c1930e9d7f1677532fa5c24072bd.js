@@ -1305,12 +1305,6 @@ return t.dispatch("turbolinks:before-render",{data:{newBody:e}})},r.prototype.no
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
-;
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
-;
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
