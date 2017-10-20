@@ -36,4 +36,4 @@ development:
 
 test:
   <<: *default
-  database: dataworkz
+  database: dataworkz_test
