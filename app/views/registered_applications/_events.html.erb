@@ -1,0 +1,9 @@
+<div class="media">
+  <div class="media-body">
+    <h6 class="media-heading">
+      <% @events.map{ |key, array| %>
+        <%= "Event: #{key.upcase} has #{array.count} hits" %>
+        <% } %> <br />
+    </h4>
+  </div>
+</div>

@@ -23,6 +23,7 @@ class RegisteredApplicationsController < ApplicationController
 
   def show
     @applet = RegisteredApplication.find(params[:id])
+    @events = @applet.events.group_by(&:name)
   end
 
   def edit
