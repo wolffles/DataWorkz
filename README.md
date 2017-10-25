@@ -4,7 +4,7 @@ Application that aggregates website usage, to help track and monitor website sta
 Rails version 5.1.4
 
 ### javascript snippet to add to registered applications
-var dataworkz= {}
+```var dataworkz= {}
 dataworkz.report = function(eventName){
  var event = {event: {name:eventName}};
  var request = new XMLHttpRequest();
@@ -12,3 +12,4 @@ dataworkz.report = function(eventName){
  request.setRequestHeader('Content-Type', 'application/json');
  request.send(JSON.stringify(event));
 };
+```
