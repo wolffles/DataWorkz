@@ -5,5 +5,28 @@
 <%= link_to "Delete", @applet , method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this registered application?' } %>
 
 <div class='col-md-8'>
+  <h5> put this snippet into your javascript/application.js file to start tracking events. </h5>
+  <p>
+  <pre><code> var dataworkz= {}
+  dataworkz.report = function(eventName){
+    <!--created a JSON object to send to recieving api -->
+   var event = {event: {name:eventName}};
+    <!-- initializing a new XMLHttpReqest() (AJAX request)-->
+   var request = new XMLHttpRequest();
+    <!-- we set up the HTTP method to POST, url of events endpoint, and allow the request to run asynchronously.( asynchronously by default if false its synchronously). -->
+   request.open('POST', 'http://localhost:3000/api/events', true)
+    <!-- setRequestHeader() sets request Content-type header to application/json ( Without this, our API::EventsController would not know how to process the request as JSON.)-->
+   request.setRequestHeader('Content-Type', 'application/json');
+   <!-- send the request -->
+   request.send(JSON.stringify(event));
+ }; )
+</code></pre>
+<h5> 'report' function can now be used after you'ved pasted the code. </h5>
+  <p><code>&lt;a&gt; href="/about" onclick="dataworkz.report('name of event')"> something here &lt;/a&gt; </code></p>
+  <p><code>&lt;script&gt;dataworkz.report('about page loaded');&lt;/script&gt;</code></p>
+
+
+</div>
+<div class='col-md-8'>
 <%= render 'events' %>
 </div>
