@@ -32,8 +32,12 @@ default: &default
 
 development:
   <<: *default
-  database: dataworkz
+  database: dataworkz_development
 
 test:
   <<: *default
   database: dataworkz_test
+
+production:
+  <<: *default
+  database: dataworkz

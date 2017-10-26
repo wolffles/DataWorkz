@@ -14,7 +14,7 @@
     <!-- initializing a new XMLHttpReqest() (AJAX request)-->
    var request = new XMLHttpRequest();
     <!-- we set up the HTTP method to POST, url of events endpoint, and allow the request to run asynchronously.( asynchronously by default if false its synchronously). -->
-   request.open('POST', 'http://localhost:3000/api/events', true)
+   request.open('POST', 'https://demo-dataworkz.herokuapp.com/api/events', true)
     <!-- setRequestHeader() sets request Content-type header to application/json ( Without this, our API::EventsController would not know how to process the request as JSON.)-->
    request.setRequestHeader('Content-Type', 'application/json');
    <!-- send the request -->
