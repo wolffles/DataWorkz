@@ -74,3 +74,7 @@ gem 'redcarpet'
  gem 'bootswatch-rails'
 
  gem 'faker'
+#used for making graphs
+ gem "chartkick"
+#helps group by date
+ gem 'groupdate'
