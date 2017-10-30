@@ -4,10 +4,11 @@
       <% @events.map{ |key, array| %>
         <div class="md-8-col">
           <%= "Event: #{key.upcase} has #{array.count} hits" %> <br/>
+
           <% } %>
           <div class="md-8-col">
-            <%= pie_chart get_views_registered_application_path %>
-            <%= line_chart @applet.events.group_by_day(:created_at).count %>
+            <%= pie_chart  event_names_registered_application_path  %>
+            <%= line_chart event_name_registered_application_path %>
           </div>
         </div>
     </h4>

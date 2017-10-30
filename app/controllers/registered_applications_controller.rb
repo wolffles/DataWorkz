@@ -54,9 +54,14 @@ class RegisteredApplicationsController < ApplicationController
     end
   end
 
-  def get_views
+  def event_names
     @applet = RegisteredApplication.find(params[:id])
-    render json: @applet.events.group_by_day(:created_at).count
+    render json: @applet.events.group(:name).count
+  end
+
+  def event_name
+    @applet = RegisteredApplication.find(params[:id])
+    render json: @applet.events.where(name:'view').group_by_day(:created_at).count
   end
 
   private

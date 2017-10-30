@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   resources :registered_applications do
     member do
-      get 'get_views'
+      get 'event_names'
+      get 'event_name'
     end
   end
 
