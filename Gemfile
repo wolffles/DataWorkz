@@ -75,6 +75,6 @@ gem 'redcarpet'
 
  gem 'faker'
 #used for making graphs
- gem "chartkick"
+ gem 'chartkick'
 #helps group by date
  gem 'groupdate'
