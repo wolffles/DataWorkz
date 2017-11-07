@@ -47,6 +47,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'turbolinks', '~> 5'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -71,10 +72,10 @@ gem 'pundit'
 gem 'redcarpet'
 
 #allows for an imported theme. add it to
- gem 'bootswatch-rails'
+gem 'bootswatch-rails'
 
- gem 'faker'
+gem 'faker'
 #used for making graphs
- gem 'chartkick'
+gem 'chartkick'
 #helps group by date
- gem 'groupdate'
+gem 'groupdate'
