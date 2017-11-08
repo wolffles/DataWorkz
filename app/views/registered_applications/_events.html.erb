@@ -1,0 +1,17 @@
+<div class="media">
+  <div class="media-body">
+    <h6 class="media-heading">
+      <% @events.map{ |key, array| %>
+        <div class="md-8-col">
+          <%= "Event: #{key.upcase} has #{array.count} hits" %> <br/>
+
+          <% } %>
+          <div class="md-8-col">
+            
+            <%= pie_chart  event_names_registered_application_path  %>
+            <%= line_chart event_name_registered_application_path %>
+          </div>
+        </div>
+    </h4>
+  </div>
+</div>
