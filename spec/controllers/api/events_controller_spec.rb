@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe API::EventsController, type: :controller do
-  let(:user1) { create(:user, email: "newuser@blocmetrics.io", username: "happyuser99") }
+  let(:user1) { create(:user, email: "newuser@blocmetrics.io") }
   let(:registered_application) { create(:registered_application, user_id: user1.id) }
 
    describe "POST create" do

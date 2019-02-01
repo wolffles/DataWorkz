@@ -61,7 +61,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
         expect(response).to render_template :edit
       end
 
-      it "assigns topic to be updated to @applet" do
+      it "assigns registered application to be updated to @applet" do
         get :edit, params: { id: @my_app.id }
         app_instance = assigns(:applet)
 
