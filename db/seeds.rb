@@ -29,6 +29,9 @@ RegisteredApplication.create!(url: "demo-bloccit.herokuapp.com", name:"bloccit",
 50.times{
   Event.create!(name:"view",  registered_application_id: RegisteredApplication.all[0..2].sample.id)
 }
+100.times{
+  Event.create!(name:"view", created_at: Time.now-rand(1..5).day , registered_application_id: RegisteredApplication.all[0..2].sample.id)
+}
 
 puts "Seed Finished"
 puts "#{User.count} user created"

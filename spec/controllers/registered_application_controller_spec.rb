@@ -4,9 +4,9 @@ require 'faker'
 RSpec.describe RegisteredApplicationsController, type: :controller do
   context "signed_in" do
     before(:each) do
-      @my_user = FactoryGirl.create(:user)
+      @my_user = FactoryBot.create(:user)
       sign_in @my_user
-      @my_app = FactoryGirl.create(:registered_application, user: @my_user)
+      @my_app = FactoryBot.create(:registered_application, user: @my_user)
     end
 
     describe "GET index" do
