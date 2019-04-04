@@ -7,23 +7,25 @@ rails version 5.2.2.1
 ### Setting up the repo locally on Mac
 1. Clone it: In the directory you want to put the repo
   `git clone https://github.com/wolffles/DataWorkz.git`
-2. cd into the project
-3. install dependencies
+2. Cd into the project
+3. Install dependencies
 
     `bundle install`
-4. create the DB, migrate, and seed it
+4. You should be able to start the DB at this point.
+
+    `postgres -D /usr/local/var/postgres`
+
+  * Press cmd+c to stop the database. and exit. 
+5. In another terminal tab, create the DB, migrate, and seed it
+  * be sure that you're in the right directory.
 
     `rake db:create` 
 
     `rake db:migrate`
 
     `rake db:seed`
-5. You should be able to start the DB at this point.
-
-    `postgres -D /usr/local/var/postgres`
-
-    press cmd+c to stop the database. and exit. 
-6. in another terminal tab start the rails server. 
+   
+6. Start the rails server. 
 
     `rails s`
 
